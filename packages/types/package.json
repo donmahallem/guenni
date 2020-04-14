@@ -1,0 +1,51 @@
+{
+  "name": "@guenni/types",
+  "version": "0.0.0",
+  "description": "Shared Types",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "keywords": [
+    "api",
+    "types"
+  ],
+  "scripts": {
+    "build": "npm run build:pbjs && npm run build:pbts",
+    "build:pbjs": "pbjs -t static-module ./src/types.proto > ./dist/index.js",
+    "build:pbts": "pbts -o ./dist/index.d.ts ./dist/index.js",
+    "docs": "npx jsdoc ./dist/index.js -d ./docs -P ./package.json",
+    "prepublishOnly": "npm run build"
+  },
+  "homepage": "https://donmahallem.github.io/guenni/",
+  "author": {
+    "name": "donmahallem",
+    "email": "donmahallem@users.noreply.github.com",
+    "url": "https://github.com/donmahallem"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/donmahallem/guenni/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donmahallem/guenni.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "!src/**/*.spec.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "jsdoc": "~3.6.4",
+    "protobufjs": "~6.8.9"
+  },
+  "peerDependencies": {
+    "protobufjs": "~6.8.9"
+  }
+}
