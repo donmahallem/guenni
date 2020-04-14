@@ -28,7 +28,7 @@ jobs:
       - name: Run Test
         run: npm run test:coverage --no-sort
       - name: Upload coverage to Codecov
-        run: ./codecov_upload.sh
+        run: ./.github/codecov_upload.sh
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Run Lint
