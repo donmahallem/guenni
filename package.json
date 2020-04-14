@@ -15,6 +15,7 @@
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run test",
+    "test:coverage": "lerna run test:coverage",
     "lint": "lerna run lint",
     "docs": "lerna run docs"
   }
