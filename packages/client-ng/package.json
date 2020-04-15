@@ -15,7 +15,27 @@
     "prepublishOnly": "npm run test && npm run docs && npm run build",
     "postinstall": "node ./ng-add-pug-loader.js"
   },
-  "private": true,
+  "private": false,
+  "homepage": "https://donmahallem.github.io/guenni/",
+  "author": {
+    "name": "donmahallem",
+    "email": "donmahallem@users.noreply.github.com",
+    "url": "https://github.com/donmahallem"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/donmahallem/guenni/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donmahallem/guenni.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@angular/animations": "~9.0.4",
     "@angular/cdk": "~9.1.0",
