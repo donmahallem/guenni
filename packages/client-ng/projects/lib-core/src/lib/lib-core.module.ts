@@ -3,13 +3,11 @@
  */
 
 import { NgModule } from '@angular/core';
-import { ApiService } from './api.service';
 
 @NgModule({
   imports: [
   ],
   providers: [
-    ApiService,
   ],
 })
 export class LibCoreModule { }

@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:projects && ng build",
+    "build:projects": "ng build --prod lib-core",
     "build-prod": "ng build --aot --prod",
     "test": "ng test --watch=false --browsers=ChromeHeadless",
     "test:coverage": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",

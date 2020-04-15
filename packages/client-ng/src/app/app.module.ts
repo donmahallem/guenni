@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiService } from 'lib-core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -19,6 +20,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    ApiService,
+  ],
 })
 export class AppModule { }
