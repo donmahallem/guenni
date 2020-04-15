@@ -1,25 +1,29 @@
+/*!
+ * Source https://github.com/donmahallem/guenni Package: client-ng
+ */
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LibCoreComponent } from './lib-core.component';
 
-describe('LibCoreComponent', () => {
+describe('LibCoreComponent', (): void => {
   let component: LibCoreComponent;
   let fixture: ComponentFixture<LibCoreComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async((): void => {
     TestBed.configureTestingModule({
-      declarations: [ LibCoreComponent ]
+      declarations: [LibCoreComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
-  beforeEach(() => {
+  beforeEach((): void => {
     fixture = TestBed.createComponent(LibCoreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', (): void => {
     expect(component).toBeTruthy();
   });
 });
