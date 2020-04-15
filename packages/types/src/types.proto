@@ -1,0 +1,18 @@
+package guennitypes;
+syntax = "proto3";
+
+message Image {
+    /**
+     * Image Id
+     */
+    required uint32 id = 1;
+    required uint32 width = 2;
+    required uint32 height = 3;
+    string title = 4;
+    message Preview {
+        required bytes data = 1;
+        required uint32 width = 2;
+        required uint32 height = 3;
+    }
+    optional Preview preview = 5;
+}
