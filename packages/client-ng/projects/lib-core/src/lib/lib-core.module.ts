@@ -3,12 +3,13 @@
  */
 
 import { NgModule } from '@angular/core';
-import { LibCoreComponent } from './lib-core.component';
+import { ApiService } from './api.service';
 
 @NgModule({
-  declarations: [LibCoreComponent],
-  exports: [LibCoreComponent],
   imports: [
+  ],
+  providers: [
+    ApiService,
   ],
 })
 export class LibCoreModule { }

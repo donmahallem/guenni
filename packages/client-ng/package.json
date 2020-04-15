@@ -49,6 +49,7 @@
     "@angular/router": "~9.0.4",
     "@guenni/types": "^0.1.0",
     "ng-cli-pug-loader": "~0.2.2",
+    "protobufjs": "~6.8.9",
     "rxjs": "~6.5.5",
     "tslib": "~1.11.1",
     "zone.js": "~0.10.2"

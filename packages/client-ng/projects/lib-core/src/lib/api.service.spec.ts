@@ -4,14 +4,14 @@
 
 import { TestBed } from '@angular/core/testing';
 
-import { LibCoreService } from './lib-core.service';
+import { ApiService } from './api.service';
 
 describe('LibCoreService', (): void => {
-  let service: LibCoreService;
+  let service: ApiService;
 
   beforeEach((): void => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LibCoreService);
+    service = TestBed.inject(ApiService);
   });
 
   it('should be created', (): void => {
