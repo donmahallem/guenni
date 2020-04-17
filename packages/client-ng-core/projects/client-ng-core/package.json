@@ -1,0 +1,30 @@
+{
+  "name": "@guenni/client-ng-core",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "~9.1.0",
+    "@angular/core": "~9.1.0",
+    "tslib": "~1.10.0"
+  },
+  "private": false,
+  "homepage": "https://donmahallem.github.io/guenni/",
+  "author": {
+    "name": "donmahallem",
+    "email": "donmahallem@users.noreply.github.com",
+    "url": "https://github.com/donmahallem"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/donmahallem/guenni/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donmahallem/guenni.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
