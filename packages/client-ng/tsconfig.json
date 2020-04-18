@@ -26,6 +26,10 @@
       "route-user": [
         "dist/route-user/route-user",
         "dist/route-user"
+      ],
+      "lib-responsive-img": [
+        "dist/lib-responsive-img/lib-responsive-img",
+        "dist/lib-responsive-img"
       ]
     }
   },
