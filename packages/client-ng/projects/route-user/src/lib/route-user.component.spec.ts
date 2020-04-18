@@ -1,25 +1,29 @@
+/*!
+ * Source https://github.com/donmahallem/guenni Package: client-ng
+ */
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RouteUserComponent } from './route-user.component';
 
-describe('RouteUserComponent', () => {
+describe('RouteUserComponent', (): void => {
   let component: RouteUserComponent;
   let fixture: ComponentFixture<RouteUserComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async((): void => {
     TestBed.configureTestingModule({
-      declarations: [ RouteUserComponent ]
+      declarations: [RouteUserComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
-  beforeEach(() => {
+  beforeEach((): void => {
     fixture = TestBed.createComponent(RouteUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', (): void => {
     expect(component).toBeTruthy();
   });
 });
