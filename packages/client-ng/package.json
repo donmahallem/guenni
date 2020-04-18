@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "npm run build:projects && ng build",
-    "build:projects": "ng build --prod lib-core",
+    "build:projects": "ng build --prod lib-core && ng build --prod route-user",
     "build-prod": "ng build --aot --prod",
     "test": "ng test --watch=false --browsers=ChromeHeadless",
     "test:coverage": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",

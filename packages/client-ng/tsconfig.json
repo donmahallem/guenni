@@ -22,6 +22,10 @@
       "lib-core": [
         "dist/lib-core/lib-core",
         "dist/lib-core"
+      ],
+      "route-user": [
+        "dist/route-user/route-user",
+        "dist/route-user"
       ]
     }
   },

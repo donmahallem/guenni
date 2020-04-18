@@ -5,7 +5,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    // tslint:disable-next-line:typedef
+    loadChildren: () => import('route-user').then((m) => m.RouteUserModule),
+    path: 'user',
+  },
+];
 
 @NgModule({
   exports: [RouterModule],
