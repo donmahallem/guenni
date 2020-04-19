@@ -5,7 +5,7 @@ message Image {
     /**
      * Image Id
      */
-    required uint32 id = 1;
+    required bytes id = 1;
     required uint32 width = 2;
     required uint32 height = 3;
     string title = 4;
@@ -15,4 +15,5 @@ message Image {
         required uint32 height = 3;
     }
     optional Preview preview = 5;
+    optional string description = 6;
 }
