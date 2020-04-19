@@ -24,6 +24,12 @@ coverage:
         target: auto
         threshold: 5%
         base: auto
+      db-core:
+        flags:
+          - DbCore
+        target: auto
+        threshold: 5%
+        base: auto
 parsers:
   javascript:
     enable_partials: yes
@@ -46,3 +52,6 @@ flags:
   Types:
     paths:
       - packages/types/src
+  DbCore:
+    paths:
+      - packages/db-core/src
