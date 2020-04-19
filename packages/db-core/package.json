@@ -1,0 +1,48 @@
+{
+    "name": "@guenni/db-core",
+    "version": "0.1.0",
+    "description": "Core Database Utils",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "private": false,
+    "scripts": {
+        "build": "tsc",
+        "test": "mocha --config ../../.mocharc.yml",
+        "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
+        "lint": "tslint -c tslint.json -p tsconfig.json src/**/*.ts",
+        "lint:fix": "tslint --fix -c tslint.json -p tsconfig.json src/**/*.ts",
+        "docs": "typedoc --options ../../typedoc.json",
+        "prepublishOnly": "npm run test && npm run docs && npm run build"
+    },
+    "dependencies": {
+        "@guenni/types": "^0.1.0"
+    },
+    "devDependencies": {
+        "tslint": "~6.1.1",
+        "typescript": "~3.8.3"
+    },
+    "files": [
+        "dist/*",
+        "src/*"
+    ],
+    "homepage": "https://donmahallem.github.io/guenni/",
+    "author": {
+        "name": "donmahallem",
+        "email": "donmahallem@users.noreply.github.com",
+        "url": "https://github.com/guenni"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/donmahallem/guenni/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/manniwatch/manniwatch.git"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
