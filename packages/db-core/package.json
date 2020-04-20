@@ -1,6 +1,6 @@
 {
     "name": "@guenni/db-core",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Core Database Utils",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -14,9 +14,8 @@
         "docs": "typedoc --options ../../typedoc.json",
         "prepublishOnly": "npm run test && npm run docs && npm run build"
     },
-    "dependencies": {},
     "devDependencies": {
-        "@guenni/types": "^0.1.0",
+        "@guenni/types": "^0.2.0",
         "rxjs": "~6.5.5",
         "tslint": "~6.1.1",
         "typescript": "~3.8.3"
