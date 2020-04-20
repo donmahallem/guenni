@@ -3,6 +3,9 @@
  */
 import { guennitypes } from '@guenni/types';
 import { Observable } from 'rxjs';
+
+type PropType<TObj, TProp extends keyof TObj> = TObj[TProp];
+
 export interface IGuenniCoreDatabase {
-    getImage(id: Buffer): Observable<guennitypes.IImage>;
+    getImage(id: PropType<guennitypes.IImage, 'id'>): Observable<guennitypes.IImage>;
 }
