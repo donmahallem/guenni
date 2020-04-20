@@ -14,10 +14,10 @@
         "docs": "typedoc --options ../../typedoc.json",
         "prepublishOnly": "npm run test && npm run docs && npm run build"
     },
-    "dependencies": {
-        "@guenni/types": "^0.1.0"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "@guenni/types": "^0.1.0",
+        "rxjs": "~6.5.5",
         "tslint": "~6.1.1",
         "typescript": "~3.8.3"
     },
@@ -44,5 +44,9 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "peerDependencies": {
+        "@guenni/types": "^0.1.0",
+        "rxjs": "~6.5.5"
     }
 }
