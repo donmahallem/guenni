@@ -17,7 +17,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "lib-core": [
+        "dist/lib-core/lib-core",
+        "dist/lib-core"
+      ],
+      "route-user": [
+        "dist/route-user/route-user",
+        "dist/route-user"
+      ],
+      "lib-responsive-img": [
+        "dist/lib-responsive-img/lib-responsive-img",
+        "dist/lib-responsive-img"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

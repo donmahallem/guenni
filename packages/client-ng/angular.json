@@ -125,6 +125,126 @@
           }
         }
       }
+    },
+    "lib-core": {
+      "projectType": "library",
+      "root": "projects/lib-core",
+      "sourceRoot": "projects/lib-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-core/tsconfig.lib.json",
+            "project": "projects/lib-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-core/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-core/src/test.ts",
+            "tsConfig": "projects/lib-core/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-core/tsconfig.lib.json",
+              "projects/lib-core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "route-user": {
+      "projectType": "library",
+      "root": "projects/route-user",
+      "sourceRoot": "projects/route-user/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/route-user/tsconfig.lib.json",
+            "project": "projects/route-user/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/route-user/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/route-user/src/test.ts",
+            "tsConfig": "projects/route-user/tsconfig.spec.json",
+            "karmaConfig": "projects/route-user/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/route-user/tsconfig.lib.json",
+              "projects/route-user/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "lib-responsive-img": {
+      "projectType": "library",
+      "root": "projects/lib-responsive-img",
+      "sourceRoot": "projects/lib-responsive-img/src",
+      "prefix": "g-respimg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-responsive-img/tsconfig.lib.json",
+            "project": "projects/lib-responsive-img/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-responsive-img/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-responsive-img/src/test.ts",
+            "tsConfig": "projects/lib-responsive-img/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-responsive-img/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-responsive-img/tsconfig.lib.json",
+              "projects/lib-responsive-img/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "guenni"
