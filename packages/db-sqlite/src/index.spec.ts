@@ -8,8 +8,11 @@ import * as sinon from 'sinon';
 import { Database } from 'sqlite3';
 import { GuenniSQLiteDatabase } from './index';
 import { SQLiteUtil } from './sqlite-util';
-import { TestScheduler, RunHelpers } from 'rxjs/testing';
 import { Observable } from 'rxjs';
+import { RunHelpers } from 'rxjs/internal/testing/TestScheduler';
+import { TestScheduler } from 'rxjs/testing';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
+import { guennitypes } from '@guenni/types';
 const testScheduler: TestScheduler = new TestScheduler((actual: any, expected: any): void => {
     // asserting the two objects are equal
     // e.g. using chai.
@@ -19,14 +22,12 @@ describe('index.ts', (): void => {
     describe('IGuenniSQLiteDatabase', (): void => {
         let testSqlDb: Database;
         let testDb: GuenniSQLiteDatabase;
-        let nextSpy: sinon.SinonSpy;
         let sandbox: sinon.SinonSandbox;
         let sqliteGetStub: sinon.SinonStub;
         before((): void => {
             sandbox = sinon.createSandbox();
         });
         beforeEach((done: Mocha.Done): void => {
-            nextSpy = sandbox.spy();
             sqliteGetStub = sandbox.stub(SQLiteUtil, 'get');
             testSqlDb = new Database(':memory:', done);
             testDb = new GuenniSQLiteDatabase(testSqlDb);
@@ -43,31 +44,24 @@ describe('index.ts', (): void => {
             it('should complete without value if not matching', (done: Mocha.Done): void => {
                 testScheduler.run((helpers: RunHelpers): void => {
                     const { cold, expectObservable, expectSubscriptions } = helpers;
-                    const e1: Observable<any> = cold('-a--b--c---|');
+                    const e1: ColdObservable<any> = cold('-a--b--c---|');
+                    sqliteGetStub.returns(e1);
                     const subs: string = '^----------!';
-                    const expected: string = '-a-----c---|';
-
-                    expectObservable(e1.pipe(throttleTime(3, testScheduler))).toBe(expected);
-                    expectSubscriptions(e1.subscriptions).toBe(subs);
+                    const expected: string = '-a--b--c---|';
+                    const testObservable: Observable<guennitypes.IImage> = testDb.getImage(testImageId);
+                    expect(testObservable).to.deep.equal(e1);
+                    expectObservable(testObservable).toBe(expected);
+                    if (false) {
+                        expectSubscriptions(e1.subscriptions).toBe(subs);
+                    }
+                    helpers.flush();
                 });
-                testDb.getImage(testImageId)
-                    .subscribe(nextSpy, done, (): void => {
-                        expect(nextSpy.callCount).to.equal(0);
-                        done();
-                    });
-            });
-            it('should complete with value if matching', (done: Mocha.Done): void => {
-                testSqlDb.run('INSERT INTO images (id) VALUES (:test)', {
-                    ':test': testImageId,
-                });
-                testDb.getImage(testImageId)
-                    .subscribe(nextSpy, done, (): void => {
-                        expect(nextSpy.callCount).to.equal(1);
-                        expect(nextSpy.getCall(0).args).to.deep.equal([{
-                            id: testImageId,
-                        }]);
-                        done();
-                    });
+                expect(sqliteGetStub.callCount).to.equal(1, 'SQLiteUtil.get should be called once');
+                expect(sqliteGetStub.getCall(0).args).to.deep.equal([
+                    testSqlDb,
+                    'SELECT * FROM images WHERE id = :imgid;', {
+                        ':imgid': testImageId,
+                    }]);
             });
         });
     });
