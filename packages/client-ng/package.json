@@ -46,7 +46,7 @@
     "@angular/material": "~9.2.4",
     "@angular/platform-browser": "~9.1.8",
     "@angular/platform-browser-dynamic": "~9.0.4",
-    "@angular/router": "~9.1.8",
+    "@angular/router": "~9.1.9",
     "@guenni/types": "^0.2.0",
     "ng-cli-pug-loader": "~0.2.2",
     "rxjs": "~6.5.5",
