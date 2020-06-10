@@ -42,7 +42,7 @@
     "@angular/common": "~9.1.10",
     "@angular/compiler": "~9.0.4",
     "@angular/core": "~9.0.4",
-    "@angular/forms": "~9.1.9",
+    "@angular/forms": "~9.1.10",
     "@angular/material": "~9.2.4",
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.0.4",
