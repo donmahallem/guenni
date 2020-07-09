@@ -45,7 +45,7 @@
     "@angular/forms": "~10.0.2",
     "@angular/material": "~10.0.1",
     "@angular/platform-browser": "~10.0.3",
-    "@angular/platform-browser-dynamic": "~10.0.2",
+    "@angular/platform-browser-dynamic": "~10.0.3",
     "@angular/router": "~10.0.3",
     "@guenni/types": "^0.2.0",
     "ng-cli-pug-loader": "~0.2.2",
