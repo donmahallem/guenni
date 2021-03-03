@@ -15,8 +15,8 @@
         "prepublishOnly": "npm run test && npm run docs && npm run build"
     },
     "devDependencies": {
-        "@guenni/types": "^0.2.0",
-        "rxjs": "6.6.3",
+        "@guenni/types": "0.2.0",
+        "rxjs": "6.6.6",
         "tslint": "6.1.3",
         "typescript": "3.9.9"
     },
@@ -45,7 +45,7 @@
         "access": "public"
     },
     "peerDependencies": {
-        "@guenni/types": "^0.1.0",
+        "@guenni/types": "^0.2.0",
         "rxjs": "~6.6.3"
     }
 }
