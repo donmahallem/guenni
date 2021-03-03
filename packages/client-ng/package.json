@@ -73,7 +73,7 @@
     "karma-jasmine-html-reporter": "1.5.4",
     "ng-cli-pug-loader": "0.2.2",
     "protractor": "7.0.0",
-    "pug": "3.0.0",
+    "pug": "3.0.1",
     "pug-cli": "1.0.0-alpha6",
     "pug-loader": "2.4.0",
     "ts-node": "9.1.1",
