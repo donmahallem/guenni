@@ -30,6 +30,12 @@ coverage:
         target: auto
         threshold: 5%
         base: auto
+      api-route-image:
+        flags:
+          - ApiRouteImage
+        target: auto
+        threshold: 5%
+        base: auto
 parsers:
   javascript:
     enable_partials: yes
@@ -55,3 +61,6 @@ flags:
   DbCore:
     paths:
       - packages/db-core/src
+  ApiRouteImage:
+    paths:
+      - packages/api-route-image/src
