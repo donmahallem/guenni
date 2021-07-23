@@ -48,3 +48,6 @@ Thumbs.db
 # Pug Files
 /src/**/*.html
 /src/*.html
+
+# unignore npmrc
+!.npmrc

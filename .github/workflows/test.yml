@@ -3,22 +3,34 @@ on: [push,pull_request]
 
 jobs:
   test_suite:
-    runs-on: ubuntu-latest
-    name: Test
+    runs-on: ${{ matrix.os }}
+    name: Test - ${{ matrix.os }} - Node ${{ matrix.node }}
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        node: [12, 16]
+        os: [ubuntu-latest] #, windows-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 200
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2.3.0
         with:
-          node-version: '12.x'
+          node-version: ${{ matrix.node }}
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
       - name: Setup Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.6
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          path: |
+            ${{ steps.npm-cache.outputs.dir }}
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-node${{ matrix.node }}-npm-${{ hashFiles('**/package-lock.json') }}
       - name: Install Deps
         run: |
           npm ci
@@ -35,3 +47,11 @@ jobs:
         run: npm run lint --no-sort
       - name: Run Docs
         run: npm run docs --no-sort
+
+  finish:
+    needs: test_suite
+    name: Finish Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Coveralls Finished
+      run: echo "finish"
