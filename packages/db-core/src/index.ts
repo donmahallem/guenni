@@ -1,6 +1,8 @@
-/*!
- * Source https://github.com/donmahallem/guenni Package: db-core
+/*
+ * Package @guenni/db-core
+ * Source https://donmahallem.github.io/guenni/
  */
+
 import { guennitypes } from '@guenni/types';
 import { Observable } from 'rxjs';
 

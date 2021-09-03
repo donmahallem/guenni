@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/donmahallem/guenni Package: db-core
+/*
+ * Package @guenni/db-core
+ * Source https://donmahallem.github.io/guenni/
  */
 
 import { expect } from 'chai';
