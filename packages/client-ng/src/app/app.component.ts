@@ -1,14 +1,15 @@
-/*!
- * Source https://github.com/donmahallem/guenni Package: client-ng
+/*
+ * Package @guenni/client-ng
+ * Source https://donmahallem.github.io/guenni/
  */
 
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  styleUrls: ['./app.component.scss'],
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    styleUrls: ['./app.component.scss'],
+    templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title: string = 'guenni';
+    title = 'guenni';
 }
