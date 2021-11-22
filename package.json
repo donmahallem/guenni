@@ -34,5 +34,12 @@
     "test:coverage": "lerna run test:coverage",
     "lint": "lerna run lint",
     "docs": "lerna run docs"
+  },
+  "readme": "./README.md",
+  "author": {
+    "name": "donmahallem"
+  },
+  "engines": {
+    "node": "^12||^14||^16"
   }
 }
