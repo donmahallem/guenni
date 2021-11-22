@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/donmahallem/guenni Package: client-ng
+/*
+ * Package @guenni/client-ng
+ * Source https://donmahallem.github.io/guenni/
  */
 
 import { NgModule } from '@angular/core';
@@ -10,15 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  bootstrap: [AppComponent],
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [],
+    bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+    providers: [],
 })
-export class AppModule { }
+export class AppModule {}
