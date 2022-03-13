@@ -1,13 +1,14 @@
-/*!
- * Source https://github.com/donmahallem/guenni Package: client-ng
+/*
+ * Package @guenni/client-ng
+ * Source https://donmahallem.github.io/guenni/
  */
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment: any = {
-  production: false,
+export const environment: { production: boolean } = {
+    production: false,
 };
 
 /*
