@@ -42,7 +42,7 @@
     "access": "public"
   },
   "dependencies": {
-    "jsdoc": "~3.6.7",
+    "jsdoc": "~3.6.10",
     "protobufjs": "~6.11.2"
   },
   "peerDependencies": {
