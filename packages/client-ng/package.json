@@ -67,7 +67,7 @@
     "@angular/compiler-cli": "13.3.12",
     "@angular/language-service": "13.3.12",
     "@compodoc/compodoc": "1.1.19",
-    "@types/jasmine": "4.3.1",
+    "@types/jasmine": "4.3.2",
     "@types/jasminewd2": "2.0.10",
     "@types/node": "16.18.20",
     "@typescript-eslint/eslint-plugin": "5.56.0",
