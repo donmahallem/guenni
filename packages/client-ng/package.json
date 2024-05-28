@@ -51,7 +51,7 @@
     "@angular/platform-browser-dynamic": "13.4.0",
     "@angular/router": "13.4.0",
     "@guenni/types": "^0.2.0",
-    "pug": "3.0.2",
+    "pug": "3.0.3",
     "rxjs": "7.8.1",
     "tslib": "2.5.2",
     "zone.js": "0.13.0"
@@ -84,7 +84,7 @@
     "karma-jasmine-html-reporter": "2.0.0",
     "ng-cli-pug-loader": "0.2.2",
     "protractor": "7.0.0",
-    "pug": "3.0.2",
+    "pug": "3.0.3",
     "pug-cli": "1.0.0-alpha6",
     "pug-loader": "2.4.0",
     "ts-node": "10.9.1",
