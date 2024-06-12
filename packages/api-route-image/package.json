@@ -1,0 +1,65 @@
+{
+  "name": "@manniwatch/api-route-image",
+  "version": "0.1.0",
+  "description": "An express api router used to proxy requests to the upstream server",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "keywords": [
+    "api",
+    "types"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --config ../../.mocharc.yml",
+    "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
+    "lint": "tslint -c tslint.json -p tsconfig.json src/**/*.ts",
+    "lint:fix": "tslint --fix -c tslint.json -p tsconfig.json src/**/*.ts",
+    "docs": "typedoc --options ../../typedoc.json",
+    "prepublishOnly": "npm run test && npm run docs && npm run build"
+  },
+  "homepage": "https://donmahallem.github.io/guenni/",
+  "author": {
+    "name": "donmahallem",
+    "email": "donmahallem@users.noreply.github.com",
+    "url": "https://github.com/donmahallem"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/donmahallem/guenni/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donmahallem/guenni.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@guenni/db-core": "^0.1.0",
+    "@guenni/types": "^0.1.0",
+    "express": "~4.17.1",
+    "jsonschema": "~1.2.6"
+  },
+  "devDependencies": {
+    "@types/express": "~4.17.6",
+    "@types/helmet": "~0.0.45",
+    "@types/request-promise-native": "~1.0.17",
+    "@types/supertest": "~2.0.8",
+    "apidoc": "~0.20.1",
+    "request-promise-native": "~1.0.8",
+    "supertest": "~4.0.2",
+    "tslint": "~6.1.1",
+    "typescript": "~3.8.3"
+  },
+  "peerDependencies": {
+    "request-promise-native": "^1.0.8"
+  }
+}
