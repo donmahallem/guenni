@@ -6,7 +6,7 @@
     "@donmahallem/tslint-config": "0.4.1",
     "@types/chai": "4.3.5",
     "@types/mocha": "10.0.1",
-    "@types/node": "16.18.34",
+    "@types/node": "16.18.104",
     "@types/sinon": "10.0.15",
     "chai": "4.3.7",
     "commitizen": "4.3.0",
