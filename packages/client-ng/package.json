@@ -68,7 +68,7 @@
     "@angular/language-service": "13.4.0",
     "@compodoc/compodoc": "1.1.19",
     "@types/jasmine": "4.3.2",
-    "@types/jasminewd2": "2.0.10",
+    "@types/jasminewd2": "2.0.13",
     "@types/node": "16.18.34",
     "@typescript-eslint/eslint-plugin": "5.59.7",
     "@typescript-eslint/parser": "5.59.7",
