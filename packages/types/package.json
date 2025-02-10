@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "jsdoc": "~3.6.11",
-    "protobufjs": "~6.11.3"
+    "protobufjs": "~6.11.4"
   },
   "peerDependencies": {
     "protobufjs": "~6.11.0"
