@@ -69,7 +69,7 @@
     "@compodoc/compodoc": "1.1.19",
     "@types/jasmine": "4.6.4",
     "@types/jasminewd2": "2.0.13",
-    "@types/node": "16.18.104",
+    "@types/node": "16.18.126",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "apply-loader": "2.0.0",
